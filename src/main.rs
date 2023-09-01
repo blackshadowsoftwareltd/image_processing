@@ -1,3 +1,7 @@
+use fractal::fractal::fractal_image;
+
+pub mod fractal;
+
 fn main() {
-    println!("Hello, world!");
+    fractal_image();
 }
