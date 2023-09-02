@@ -1,4 +1,4 @@
-use brighten::brighten::brighten_image;
+use contrast::contrast::contrast_image;
 
 pub mod blur;
 pub mod brighten;
@@ -7,7 +7,8 @@ pub mod gradient;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
+pub mod contrast;
 
 fn main() {
-    brighten_image();
+    contrast_image();
 }
