@@ -3,9 +3,7 @@ use std::path::PathBuf;
 use image::{Pixel, Rgba, RgbaImage};
 
 pub fn gradient_image() {
-    let p = PathBuf::new();
-    let p = p.join("src");
-    let gradient_path = p.join("gradient");
+    let gradient_path = PathBuf::from("src/gradient");
 
     let mut img = RgbaImage::new(500, 500);
 
