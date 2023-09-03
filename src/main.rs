@@ -1,4 +1,4 @@
-use grayscale::grayscale::grayscale_image;
+use huerotate::huerotate::huerotate_image;
 
 pub mod blur;
 pub mod brighten;
@@ -10,7 +10,8 @@ pub mod grayscale;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
+pub mod huerotate;
 
 fn main() {
-    grayscale_image();
+    huerotate_image();
 }
