@@ -1,4 +1,4 @@
-use huerotate::huerotate::huerotate_image;
+use inverts::inverts::inverts_image;
 
 pub mod blur;
 pub mod brighten;
@@ -7,11 +7,12 @@ pub mod dither;
 pub mod fractal;
 pub mod gradient;
 pub mod grayscale;
+pub mod huerotate;
+pub mod inverts;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
-pub mod huerotate;
 
 fn main() {
-    huerotate_image();
+    inverts_image();
 }
