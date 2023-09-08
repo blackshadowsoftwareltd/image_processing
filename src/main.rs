@@ -1,4 +1,4 @@
-use flip_horizontal::flip_horizontal::flip_horizontal_image;
+use overlay::overlay::overlay_image;
 
 pub mod blur;
 pub mod brighten;
@@ -10,10 +10,11 @@ pub mod gradient;
 pub mod grayscale;
 pub mod huerotate;
 pub mod inverts;
+pub mod overlay;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
 
 fn main() {
-    flip_horizontal_image();
+    overlay_image();
 }
