@@ -1,8 +1,9 @@
-use overlay::overlay::overlay_image;
+use crop::crop::crop_image;
 
 pub mod blur;
 pub mod brighten;
 pub mod contrast;
+pub mod crop;
 pub mod dither;
 pub mod flip_horizontal;
 pub mod fractal;
@@ -16,5 +17,5 @@ pub mod scaleup;
 pub mod tile;
 
 fn main() {
-    overlay_image();
+    crop_image();
 }
