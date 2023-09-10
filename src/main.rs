@@ -1,4 +1,4 @@
-use crop::crop::crop_image;
+use resize::resize::resize_image;
 
 pub mod blur;
 pub mod brighten;
@@ -15,7 +15,8 @@ pub mod overlay;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
+pub mod resize;
 
 fn main() {
-    crop_image();
+    resize_image();
 }
