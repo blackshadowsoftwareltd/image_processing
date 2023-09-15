@@ -1,4 +1,4 @@
-use resize::resize::resize_image;
+use rotate90::rotate90::rotate90_image;
 
 pub mod blur;
 pub mod brighten;
@@ -12,11 +12,12 @@ pub mod grayscale;
 pub mod huerotate;
 pub mod inverts;
 pub mod overlay;
+pub mod resize;
+pub mod rotate90;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
-pub mod resize;
 
 fn main() {
-    resize_image();
+    rotate90_image();
 }
