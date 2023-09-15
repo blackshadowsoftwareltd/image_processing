@@ -6,7 +6,7 @@ use std::path::PathBuf;
 use std::time::{Duration, Instant};
 pub fn scaledown_image() {
     let path = PathBuf::from("assets/food.jpg");
-    let seve_path = PathBuf::from("src/scaledown");
+    let save_path = PathBuf::from("src/scaledown");
     let img = image::open(path).unwrap();
     for &(name, filter) in [
         ("near", FilterType::Nearest),
@@ -20,7 +20,7 @@ pub fn scaledown_image() {
         let timer = Instant::now();
         let scaled = img.resize(800, 800, filter);
         println!("Scaled by {} in {}", name, Elapsed::from(&timer));
-        let path = seve_path.join(format!("test-{}.png", name));
+        let path = save_path.join(format!("test-{}.png", name));
         let mut output = File::create(path).unwrap();
         scaled.write_to(&mut output, ImageFormat::Png).unwrap();
     }
@@ -29,7 +29,7 @@ pub fn scaledown_image() {
         let timer = Instant::now();
         let scaled = img.thumbnail(*size, *size);
         println!("Thumbnailed to {} in {}", size, Elapsed::from(&timer));
-        let path = seve_path.join(format!("test-thumb{}.png", size));
+        let path = save_path.join(format!("test-thumb{}.png", size));
         let mut output = File::create(path).unwrap();
         scaled.write_to(&mut output, ImageFormat::Png).unwrap();
     }

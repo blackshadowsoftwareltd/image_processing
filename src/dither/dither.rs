@@ -4,14 +4,14 @@ use image::imageops::{dither, ColorMap};
 
 pub fn dither_image() {
     let path = PathBuf::from("assets/food.jpg");
-    let seve_path = PathBuf::from("src/dither");
+    let save_path = PathBuf::from("src/dither");
 
     let mut img = image::open(path).unwrap().into_rgba8();
     let color_map = MyColorMap;
 
     dither(&mut img, &color_map);
 
-    img.save(seve_path.join("dither.png")).unwrap();
+    img.save(save_path.join("dither.png")).unwrap();
 }
 struct MyColorMap;
 impl ColorMap for MyColorMap {
