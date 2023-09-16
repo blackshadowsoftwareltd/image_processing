@@ -1,4 +1,4 @@
-use rotate90::rotate90::rotate90_image;
+use rotate180::rotate180::rotate180_image;
 
 pub mod blur;
 pub mod brighten;
@@ -13,11 +13,12 @@ pub mod huerotate;
 pub mod inverts;
 pub mod overlay;
 pub mod resize;
+pub mod rotate180;
 pub mod rotate90;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
 
 fn main() {
-    rotate90_image();
+    rotate180_image();
 }
