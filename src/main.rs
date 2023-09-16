@@ -1,4 +1,4 @@
-use tile::tile::tile_image_from_doc;
+use unsharpen::unsharpen::unsharpen_image;
 
 pub mod blur;
 pub mod brighten;
@@ -19,7 +19,8 @@ pub mod rotate90;
 pub mod scaledown;
 pub mod scaleup;
 pub mod tile;
+pub mod unsharpen;
 
 fn main() {
-    tile_image_from_doc();
+    unsharpen_image();
 }
