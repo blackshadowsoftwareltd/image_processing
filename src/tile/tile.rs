@@ -12,3 +12,16 @@ pub fn tile_image() {
     let path = save_path.join("tiled_wallpaper.png");
     img.save(path).unwrap();
 }
+
+pub fn tile_image_from_doc() {
+    let path = PathBuf::from("assets/pxfuel.jpg");
+    let save_path = PathBuf::from("src/tile");
+
+    let mut img = RgbaImage::new(1920, 1080);
+    let tile = image::open(path).unwrap();
+
+    image::imageops::tile(&mut img, &tile);
+
+    let path = save_path.join("tile_from_doc.jpg");
+    img.save(path).unwrap();
+}

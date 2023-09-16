@@ -1,4 +1,4 @@
-use rotate180_in_place::rotate180_in_place::rotate180_in_place_image;
+use tile::tile::tile_image_from_doc;
 
 pub mod blur;
 pub mod brighten;
@@ -21,5 +21,5 @@ pub mod scaleup;
 pub mod tile;
 
 fn main() {
-    rotate180_in_place_image();
+    tile_image_from_doc();
 }
